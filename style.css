@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+*{
+    margin: 0;
+}
+body{
+    background-color: hsl(233, 47%, 7%);
+}
+
+.parent-container{
+    background-color: hsl(244, 38%, 16%);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+
+    width: 80%;
+    height: 86%;
+
+    padding: 0;
+    margin: 7% 10%;
+}
+.img-container{
+    width: 100%;
+
+    background-color: hsl(277, 47%, 32%);
+    height: 100%;
+}
+.content-container{
+    width: 90%;
+    padding: 12%;
+    box-sizing: border-box;
+}
+.img{
+    width: 100%;
+    height: 100%;
+
+    mix-blend-mode: overlay;
+}
+
+.stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10%;
+
+    padding-top: 10%;
+}
+.stat-item{
+    text-align: left;
+}
+
+.title{
+    color: hsl(0, 0%, 100%);
+    font-family: "Inter";
+    font-weight: 700;
+
+}
+.stat-value{
+    color:hsl(0, 0%, 100%);
+    font-family: "Inter";
+    font-weight: 700;
+}
+.stat-name{
+    color: hsla(0, 0%, 100%, 0.6);
+    font-family: "Inter";
+    font-weight: 400;
+
+    text-transform: uppercase;
+}
+.disc{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: "Lexend Deca";
+    padding: 8% 0 10% 0;
+
+}
+
+@media screen and (max-width: 700px){
+    .parent-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .img-container{
+        grid-row: 1;
+    }
+
+    .stats{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 0;
+    }
+    .stat-item{
+        text-align: center;
+    }
+    .stat-name{
+        font-weight: 400;
+    }
+    .title{
+        text-align: center;
+    }
+    .disc{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .content-container{
+        padding: 10px 5px;
+        text-align: center;
+        width: 100%;
+        height:max-content;
+        box-sizing: border-box;
+    }
+}
